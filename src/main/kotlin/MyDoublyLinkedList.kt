@@ -44,6 +44,7 @@ class MyDoublyLinkedList<T>(
         tail = newNode
     }
 
+    // insert element before index
     override fun insert(element: T, index: Int) {
         val found = getNode(index)
         val newNode = Node(element, found.previous, found)
