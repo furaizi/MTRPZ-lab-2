@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
+import org.junit.jupiter.api.fail
 
 abstract class AbstractMyLinkedListTest {
     protected abstract fun <T> createList(): MyLinkedList<T>
@@ -160,5 +161,10 @@ abstract class AbstractMyLinkedListTest {
         assertEquals(3, list.length())
         assertEquals('B', list.get(1))
         assertEquals('C', list.get(2))
+    }
+
+    @Test
+    fun failingTest() {
+        fail { "demo" }
     }
 }
