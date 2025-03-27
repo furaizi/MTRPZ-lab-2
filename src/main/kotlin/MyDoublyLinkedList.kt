@@ -2,7 +2,7 @@ package org.example
 
 class MyDoublyLinkedList<T>(
     private var head: Node<T>? = null, private var tail: Node<T>? = null
-): MyLinkedList<T> {
+): MyLinkedList<T>, Iterable<Node<T>> {
 
     override fun iterator(): Iterator<Node<T>> {
         return object : Iterator<Node<T>> {
@@ -26,7 +26,6 @@ class MyDoublyLinkedList<T>(
             index++
         }
     }
-
 
     override fun length(): Int {
         var count = 0

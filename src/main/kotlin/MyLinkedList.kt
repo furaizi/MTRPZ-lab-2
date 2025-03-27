@@ -1,6 +1,6 @@
 package org.example
 
-interface MyLinkedList<T>: Iterable<Node<T>> {
+interface MyLinkedList<T> {
     fun length(): Int
     fun append(element: T)
     fun insert(element: T, index: Int)
