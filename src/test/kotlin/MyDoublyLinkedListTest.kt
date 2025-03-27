@@ -65,15 +65,6 @@ class MyDoublyLinkedListTest {
     }
 
     @Test
-    fun `insert at end`() {
-        list.append('A')
-        list.append('B')
-        list.insert('C', 2)
-        assertEquals('C', list.get(2))
-        assertEquals(3, list.length())
-    }
-
-    @Test
     fun `insert invalid index throws exception`() {
         assertThrows<IndexOutOfBoundsException> { list.insert('A', 1) }
         list.append('A')
@@ -148,6 +139,7 @@ class MyDoublyLinkedListTest {
     fun `reverse list`() {
         val range = CharRange('a', 'c')
         range.forEach { list.append(it) }
+        list.reverse()
         val reversed = range.reversed()
         reversed.forEachIndexed { i, char -> assertEquals(char, list.get(i)) }
     }

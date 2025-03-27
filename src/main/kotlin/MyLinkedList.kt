@@ -18,6 +18,6 @@ interface MyLinkedList<T>: Iterable<Node<T>> {
 class Node<T>(var value: T,
               var previous: Node<T>?,
               var next: Node<T>? = null) {
-    fun isHead(): Boolean = next == null
-    fun isTail(): Boolean = previous == null
+    fun isHead(): Boolean = previous == null
+    fun isTail(): Boolean = next == null
 }

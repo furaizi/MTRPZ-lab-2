@@ -147,11 +147,13 @@ class MyDoublyLinkedList<T>(
 
         beforeFound?.next = afterFound
         afterFound?.previous = beforeFound
-        node.previous; node.next = null
 
         when {
             node.isHead() -> this.head = afterFound
             node.isTail() -> this.tail = beforeFound
         }
+
+        node.previous = null
+        node.next = null
     }
 }
