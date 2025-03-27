@@ -14,9 +14,10 @@ class MyNewLinkedListImpl<T>(
         innerList.clear()
     }
 
-    override fun findLast(element: T) = innerList.indexOf(element)
+    override fun findFirst(element: T) = innerList.indexOf(element)
 
-    override fun findFirst(element: T) = innerList.lastIndexOf(element)
+    override fun findLast(element: T) = innerList.lastIndexOf(element)
+
 
     override fun reverse() = innerList.reverse()
     override fun clone(): MyLinkedList<T> = MyNewLinkedListImpl(innerList.clone() as LinkedList<T>)
